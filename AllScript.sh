@@ -733,7 +733,10 @@ echo ""
 	;;
 
 	4)
-	echo "wget https://raw.githubusercontent.com/thirdza056/c/master/OCS.sh && chmod +x OCS.sh && ./OCS.sh"
+	wget https://raw.githubusercontent.com/thirdza056/c/master/OCS.sh && chmod +x OCS.sh && ./OCS.sh
+	
+	fi
+	
 	;;
 
 	5)
