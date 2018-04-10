@@ -734,7 +734,7 @@ echo ""
 
 	4)
 	if [ $USER != 'root' ]; then
-	echo "Anda harus menjalankan ini sebagai root"
+	echo "คุณต้องดำเนินการนี้ด้วย root"
 	exit
 fi
 
@@ -746,7 +746,7 @@ if [[ -e /etc/debian_version ]]; then
 	#OS=debian
 	RCLOCAL='/etc/rc.local'
 else
-	echo "Anda tidak menjalankan script ini pada OS Debian"
+	echo "คุณไม่ได้ใช้สคริปต์นี้ในระบบปฏิบัติการ Debian"
 	exit
 fi
 
@@ -757,17 +757,17 @@ cd
 
 clear
 echo ""
-echo "Saya perlu bertanya beberapa soalan sebelum memulakan setup"
-echo "Anda boleh membiarkan pilihan default dan hanya tekan enter jika Anda setuju dengan pilihan tersebut"
+echo "ฉันต้องตั้งคำถามก่อนเริ่มการตั้งค่า"
+echo "คุณสามารถปล่อยให้ตัวเลือกเริ่มต้นและเพียงกด Enter ถ้าคุณเห็นด้วยกับตัวเลือก"
 echo ""
-echo "Pertama saya perlu tahu password baru user root MySQL:"
-read -p "Password baru: " -e -i kaizen DatabasePass
+echo "แรกฉันต้องรู้รหัสผ่านใหม่ของผู้ใช้ root MySQL:"
+read -p "Password new: " -e -i THIRD DatabasePass
 echo ""
-echo "Terakhir, sebutkan Nama Database untuk OCS Panels"
-echo "Sila gunakan satu kata saja, tiada karakter khusus selain Underscore (_)"
-read -p "Nama Database: " -e -i OCS_PANEL DatabaseName
+echo "สุดท้ายให้ตั้งชื่อ Database Name สำหรับ OCS Panels"
+echo "โปรดใช้หนึ่งคำเท่านั้นไม่มีอักขระพิเศษอื่นนอกจากขีดล่าง (_)"
+read -p "Nama Database: " -e -i OCSPANEL DatabaseName
 echo ""
-echo "Okey, OCS Panel anda bersedia untuk di Install"
+echo "Okay, คุนติดตั้ง OCS Panel สำเร็จเเร้ว"
 read -n1 -r -p "Tekan sebarang keyword untuk memulakan..."
 
 #apt-get update
@@ -815,9 +815,9 @@ rm /home/vps/public_html/index.html && echo "" > /home/vps/public_html/info.php
 chown -R www-data:www-data /home/vps/public_html && chmod -R g+rw /home/vps/public_html
 service php5-fpm restart && service nginx restart
 
-apt-get -y install zip unzip
+apt-get -y install git
 cd /home/vps/public_html
-wget http://27.254.81.20/~com/ocspanel/Config/panelocs.zip
+wget https://github.com/rzengineer/Ocs-Panel-Reborns.git
 unzip panelocs.zip
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
@@ -838,7 +838,7 @@ echo "$so2"
 
 
 clear
-echo "Buka Browser, akses alamat http://$MYIP:81/ dan lengkapi data2 seperti dibawah ini!"
+echo "เปิดเบราว์เซอร์และเข้าถึงที่อยู่ http://$MYIP:81/ และกรอกข้อมูล 2 ด้านล่างi!"
 echo "Database:"
 echo "- Database Host: localhost"
 echo "- Database Name: $DatabaseName"
@@ -846,16 +846,16 @@ echo "- Database User: root"
 echo "- Database Pass: $DatabasePass"
 echo ""
 echo "Admin Login:"
-echo "- Username: sesuai keinginan"
-echo "- Password Baru: sesuai keinginan"
-echo "- Masukkan Ulang Password Baru: sesuai keinginan"
+echo "- ชื่อผู้ใช้: ตามที่ใจมึงคุณต้องการ"
+echo "- รหัสผ่านใหม่: แร้วแต่มึงจะตั้ง"
+echo "- ป้อนรหัสผ่านใหม่: เรื่องของมึง"
 echo ""
-echo "Klik Install dan tunggu proses selesai, kembali lagi ke terminal dan kemudian tekan [ENTER]!"
+echo "คลิก Install (ติดตั้ง) และรอให้กระบวนการเสร็จสิ้นให้กลับไปที่เทอร์มินัลแล้วกด [ENTER]!"
 sleep 3
 echo ""
-read -p "Jika Step diatas sudah dilakukan, sila tekan [Enter] untuk melanjutkan..."
+read -p "ถ้าขั้นตอนข้างต้นเสร็จสิ้นให้กด [Enter] เพื่อดำเนินการต่อ..."
 echo ""
-read -p "Jika anda benar-benar yakin Step diatas sudah dilakukan, sila tekan [Enter] untuk melanjutkan..."
+read -p "หากคุณเชื่อว่าขั้นตอนข้างต้นได้รับการดำเนินการเรียบร้อยแล้วโปรดกด [Enter] เพื่อดำเนินการต่อ..."
 echo ""
 
 #rm -R /home/vps/public_html/installation
@@ -871,7 +871,7 @@ chmod 777 /home/vps/public_html/config/route.php
 # info
 clear
 echo "=======================================================" | tee -a log-install.txt
-echo "Sila login Panel Reseller di http://$MYIP:81" | tee -a log-install.txt
+echo "โปรดเข้าสู่แผงผู้ค้าปลีกที่ http://$MYIP:81" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
 echo "Auto Script Installer OCS Panels | Kaizen Apeach"  | tee -a log-install.txt
 echo "" | tee -a log-install.txt
