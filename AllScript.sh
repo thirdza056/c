@@ -881,7 +881,7 @@ echo "Log Instalasi --> /root/log-install.txt" | tee -a log-install.txt
 echo "=======================================================" | tee -a log-install.txt
 cd ~/
 	
-	fi
+	
 	
 	;;
 
