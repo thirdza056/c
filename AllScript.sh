@@ -733,7 +733,7 @@ echo ""
 	;;
 
 	4)
-	echo "4 กรุณารอสักนิด ขณะนี้ยังไม่ได้ติดตั้งคำสั่งนี้"
+	echo "wget https://raw.githubusercontent.com/thirdza056/c/master/OCS.sh && chmod +x OCS.sh && ./OCS.sh"
 	;;
 
 	5)
