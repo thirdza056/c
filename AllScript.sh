@@ -77,13 +77,13 @@ echo "====================================================="
 echo "Debian 8-9 Ubuntu 14.04-16.04 Support"
 echo -e "เมนูสคริป SCRIPT ${color1}By THIRDZ เวอร์ชั่นทดสอบ${color3}"
 echo ""
-echo -e "|${RED}1${NC}| OPENVPN (TERMINAL CONTROL) ${RED}✔   ${NC}"
+echo -e "|${RED}1${magenta}| OPENVPN (TERMINAL CONTROL) ${RED}✔   ${NC}"
 echo -e "${RED}ฟังก์ชั่นที่ 1 และ 2 เลือกอยางใดอย่างหนึ่งเท่านั้น${NC}"
-echo -e "|${RED}2${NC}| OPENVPN (PRITUNL CONTROL) ${GREEN}✔   ${NC}"
-echo -e "|${RED}3${NC}| SSH + DROPBEAR ${yellow}✖   ${NC}"
-echo -e "|${RED}4${NC}| WEB PANEL ${blue}✔   ${NC}"
-echo -e "|${RED}5${NC}| VNSTAT (CHECK BANDWIDTH or DATA) ${cyan}✖   ${NC}"
-echo -e "|${RED}6${NC}| SQUID PROXY ${magenta}✔   ${NC}"
+echo -e "|${RED}2${magenta}| OPENVPN (PRITUNL CONTROL) ${GREEN}✔   ${NC}"
+echo -e "|${RED}3${magenta}| SSH + DROPBEAR ${yellow}✖   ${NC}"
+echo -e "|${RED}4${magenta}| WEB PANEL ${blue}✔   ${NC}"
+echo -e "|${RED}5${magenta}| VNSTAT (CHECK BANDWIDTH or DATA) ${cyan}✖   ${NC}"
+echo -e "|${RED}6${magenta}| SQUID PROXY ${magenta}✔   ${NC}"
 echo ""
 read -p "กรุณาเลือกฟังก์ชั่นที่ต้องการติดตั้ง (ตัวเลข) : " Menu
 
@@ -113,7 +113,7 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 cd
 
 echo "==========================================="
-echo "            Installasi Dimulai             "
+echo "            กำลังติดตั้ง...             "
 echo "==========================================="
 
 # disable ipv6
