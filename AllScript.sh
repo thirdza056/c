@@ -825,20 +825,13 @@ chmod -R g+rw /home/vps/public_html
 service php5-fpm restart
 service nginx restart
 
-apt-get -y install zip unzip
-
+apt-get -y install git
 cd /home/vps/public_html
+git init
+git remote add origin https://github.com/rzengineer/Ocs-Panel-Reborns.git
+git pull origin master
+chmod 777 /home/vps/public_html/application/config/database.php
 
-#wget https://github.com/rasta-team/Full-OCS/raw/master/panelocs.zip
-wget http://เฮียเบิร์ด.com/ocspanel/Config/panelocs.zip
-
-mv panelocs.zip LTEOCS.zip
-
-unzip LTEOCS.zip
-
-rm -f LTEOCS.zip
-
-rm -f index.html
 
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
@@ -853,15 +846,15 @@ echo "$so2"
 #pass
 #CREATE DATABASE IF NOT EXISTS OCS_PANEL;EXIT;
 
-chmod 777 /home/vps/public_html/application/controllers/topup/wallet/cookie.txt
-chmod 777 /home/vps/public_html/application/config/database.php
-chmod 755 /home/vps/public_html/application/controllers/topup/wallet/config.php
-chmod 755 /home/vps/public_html/application/controllers/topup/wallet/manager/TrueWallet.php
-chmod 755 /home/vps/public_html/application/controllers/topup/wallet/manager/Curl.php
-chmod 755 /home/vps/public_html/topup/confirm.php
-chmod 755 /home/vps/public_html/topup/get.php
-chmod 755 /home/vps/public_html/topup/index.php
-chmod 755 /home/vps/public_html/topup/input.php
+#chmod 777 /home/vps/public_html/application/controllers/topup/wallet/cookie.txt
+#chmod 777 /home/vps/public_html/application/config/database.php
+#chmod 755 /home/vps/public_html/application/controllers/topup/wallet/config.php
+#chmod 755 /home/vps/public_html/application/controllers/topup/wallet/manager/TrueWallet.php
+#chmod 755 /home/vps/public_html/application/controllers/topup/wallet/manager/Curl.php
+#chmod 755 /home/vps/public_html/topup/confirm.php
+#chmod 755 /home/vps/public_html/topup/get.php
+#chmod 755 /home/vps/public_html/topup/index.php
+#chmod 755 /home/vps/public_html/topup/input.php
 
 
 clear
@@ -899,11 +892,11 @@ apt-get -y --force-yes -f install libxml-parser-perl
 
 echo "unset HISTFILE" >> /etc/profile
 
-sleep 5
-echo "กรุณาตั้งค่า ระบบเติมเงิน หมายเลขอ้างอิงวอลเลต"
+#sleep 5
+#echo "กรุณาตั้งค่า ระบบเติมเงิน หมายเลขอ้างอิงวอลเลต"
 
-sleep 5
-nano /home/vps/public_html/application/controllers/topup/wallet/config.php
+#sleep 5
+#nano /home/vps/public_html/application/controllers/topup/wallet/config.php
 
 # info
 clear
@@ -915,7 +908,7 @@ echo "" | tee -a log-install.txt
 #echo "" | tee -a log-install.txt
 echo "โปรดรีบูต VPS ของคุณ!" | tee -a log-install.txt
 echo "=========================================================" | tee -a log-install.txt
-rm -f /root/Rasta-OCS.sh
+rm -rf /home/vps/public_html/install
 	
 	;;
 
