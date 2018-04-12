@@ -77,13 +77,13 @@ echo "==============================================="
 echo  -e "${yellow}Debian 8-9 Ubuntu 14.04-16.04 Support ${NC}"
 echo  -e "${yellow}เมนูสคริป SCRIPT ${color1}By THIRDZ เวอร์ชั่นทดสอบ${NC}"
 echo ""
-echo -e "|${RED}1|${blue}${NC} OPENVPN (TERMINAL CONTROL) ${RED}✔   ${NC}"
+echo -e "${RED}|1|${blue} OPENVPN (TERMINAL CONTROL) ${RED}✔   ${NC}"
 echo -e "${RED}ฟังก์ชั่นที่ 1 และ 2 เลือกอยางใดอย่างหนึ่งเท่านั้น ${NC}"
-echo -e "|${RED}2|${blue}${NC} OPENVPN (PRITUNL CONTROL) ${GREEN}✔   ${NC}"
-echo -e "|${RED}3|${blue}${NC} WEB OPENVPN ${yellow}✖   ${NC}"
-echo -e "|${RED}4|${blue}${NC} WEB PANEL ${blue}✔   ${NC}"
-echo -e "|${RED}5|${blue}${NC} VNSTAT (CHECK BANDWIDTH or DATA) ${cyan}✖   ${NC}"
-echo -e "|${RED}6|${blue}${NC} SQUID PROXY ${magenta}✔   ${NC}"
+echo -e "${RED}|2|${blue} OPENVPN (PRITUNL CONTROL) ${GREEN}✔   ${NC}"
+echo -e "${RED}|3|${blue} WEB OPENVPN ${yellow}✖   ${NC}"
+echo -e "${RED}|4|${blue} WEB PANEL ${blue}✔   ${NC}"
+echo -e "${RED}|5|${blue} VNSTAT (CHECK BANDWIDTH or DATA) ${cyan}✖   ${NC}"
+echo -e "${RED}|6|${blue} SQUID PROXY ${magenta}✔   ${NC}"
 echo ""
 read -p "กรุณาเลือกฟังก์ชั่นที่ต้องการติดตั้ง (ตัวเลข) : " Menu
 
@@ -815,7 +815,7 @@ echo ""
 
     sudo passwd openvpn
     echo"ตั้งรหัสผ่านของท่าน"
-;;
+        ;;
 
 	4)
 	if [ $USER != 'root' ]; then
