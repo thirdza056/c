@@ -814,12 +814,11 @@ echo ""
     dpkg -i openvpn-as-2.0.10-Ubuntu14.amd_64.deb
 
     sudo passwd openvpn
-    echo"ตั้งรหัสผ่านของท่าน"
-       
-        if
-	
-	
+    echo "ตั้งรหัสผ่าน"
 
+	fi
+
+	;;
 	4)
 	if [ $USER != 'root' ]; then
 	echo "Anda harus menjalankan ini sebagai root"
