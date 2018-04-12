@@ -818,7 +818,7 @@ echo ""
        
         if
 	
-	;;
+	
 
 	4)
 	if [ $USER != 'root' ]; then
