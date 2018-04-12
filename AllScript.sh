@@ -815,7 +815,8 @@ echo ""
 
     sudo passwd openvpn
     echo"ตั้งรหัสผ่านของท่าน"
-        ;;
+        if
+	;;
 
 	4)
 	if [ $USER != 'root' ]; then
